@@ -6,13 +6,19 @@
       v-on:panright="next"
       v-bind:pan-options="{ direction: 'horizontal', threshold: 30 }"
     />
-      <img :src="currentImage" alt="SpinItem.com" />
+      <template v-for="(imageUrl, key) in images">
+        <img
+          :key="key"
+          :class="{ img: true, hidden: key != currentIndex}"
+          :src="imageUrl"
+          alt="SpinItem.com"
+        />
+      </template>
   </div>
 
 </template>
 
 <script>
-// const apiUrl = "http://localhost:8000";
 const apiUrl = "http://api.spinitem.com";
 
 export default {
@@ -77,5 +83,8 @@ export default {
   #spin-item img{
     max-width: 500px;
     display: block;
+  }
+  #spin-item img.hidden{
+    display: none;
   }
 </style>
