@@ -27,7 +27,7 @@
     "rollup-plugin-node-resolve": "^3.2.0",
     "rollup-plugin-replace": "^2.0.0",
     "rollup-plugin-uglify": "^3.0.0",
-    "rollup-plugin-vue": "^3.0.0",
+    "rollup-plugin-vue": "^6.0.0",
     "rollup-watch": "^4.3.1",
     "vue": "^2.5.14",
     "vue-custom-element": "^2.1.0",
